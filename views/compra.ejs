@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sistema de Reservas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" href="https://i.ibb.co/kXMPtKN/Screenshot-1.png" type="png" size=20px>
+  </head>
+  <body>
+    <ul>
+      <li><img src="/images/uvm.png" width="60" height="60"></img></li>
+      <li><a href='/index'><i><b>Home</b></i></a></li>
+    </ul>
+    <div style = "text-align: center;">
+      <img src="https://i.ibb.co/vq53NVk/uvm.png" width="200" height="200"></img>
+    </div>
+
+
+  <h1 class="h1"style="text-align:center"> Sistema de Reservas</h1>
+
+
+  <table class="table_equipo" id="customers">
+  <tr>
+    <th>Id_compra </th>    
+    <th>Fecha</th>
+    <th>Total_compra</th>
+    <th>Cliente</th>
+    <th>Empleado</th>
+  </tr>
+  <% resp.forEach(r => { %>
+    <tr>
+      <td><%= r.Id_compra  %></td>
+      <td><%= r.Fecha_compra %></td>
+      <td><%= r.Total_compra %></td>
+      <td><%= r.Nombre_cliente %></td>
+      <td><%= r.Nombre_empleado %></td>
+    </tr>
+  <% }) %>
+</table>
+  </body>
+</html>
