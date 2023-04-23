@@ -1,71 +1,12 @@
 body {
-  background-color: rgb(17, 95, 17);
-  flex-direction: column;
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(145, 62, 91);
   justify-content: center;
-  font-family: "Times New Roman", Times, serif;
 }
 
 a {
-  color: #00B7FF;
-}
-
-.imagen{
-  width: 15%;
-  margin: 0 auto;
-  display: flex;
-  float: right;
- }
-
-
- div.form
- {
-      margin-top: 10px;
-      margin-left: 125px;
-      margin-right: 125px;
-      margin-bottom: auto;
-     display:block;
-     text-align: center;
-     top: 50px;
-
- }
- .form {
-  display: inline-block ; 
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  border: solid;  
-  background-color: lightgreen
-}
-
-.form form {
-  margin-top: 8px;
-  border: solid;  
-  background-color: lightgreen;
-}
-
-.h1 {
-  margin-bottom: 120px ;
-  color: white ;
-  background-color: darkgreen;
-}
-
-.h2 {
-  text-align:center;
-  margin-bottom: 10px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.h2Portada{
-  margin-bottom: auto;
-}
-
-.h3{
-  margin-top: 1em;
-  text-align: right;
-}
-
-.miembros{
-  text-align: right;
+  color: #deedf3;
 }
 
 ul {
@@ -73,7 +14,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #845252;
 }
 
 li {
@@ -84,7 +25,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 16px;
   text-decoration: none;
 }
 
@@ -96,29 +37,101 @@ li a:hover {
   background-color: #111;
 }
 
-
   .table_equipo {
     border-collapse: collapse;
-  background-color: aliceblue;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: rgb(203, 227, 249);
+    margin-left: auto;
+    margin-right: auto;
   }
   .table_equipo, th, td {
-    border: 1px solid  black;
+    border: 3px solid  rgb(0, 0, 0);
   }
 
 
-/*  form
+  .form {
+    display: inline-block ; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border: solid;  
+    background-color: rgb(238, 144, 197)
+  }
+
+  div.form
   {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      border: solid;  
-    background-color: lightgreen;
+       margin-top: 10px;
+       margin-left: 380px;
+       margin-right: 380px;
+       margin-bottom: auto;
+      display:block;
+      text-align: center;
+      top: 50px;
+
   }
- 
-#customers {
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 10%;
+    border-radius: 10%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  body {font-family: Arial, Helvetica, sans-serif;}
+  form {border: 3px solid #f1f1f1;}
+
+
+  #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -140,3 +153,5 @@ li a:hover {
     background-color: #dd267b;
     color: white;
   }
+
+ 

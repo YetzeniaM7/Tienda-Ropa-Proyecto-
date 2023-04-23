@@ -31,9 +31,13 @@ class tModelo {
     }
  
     //Actualizar registros
+   
+    
+    
+    
     Actualizar(i,r){
         return new Promise ((resolve,reject)=>{           
-            var query = connection.query('UPDATE VENTA SET  FECHA_VENTA = ?, TOTAL_VENTA = ?, ID_CLIENTE = ?, ID_EMPLEADO = ?', [r.FECHA_VENTA, r.Total_venta,r.Id_cliente , r.Id_empleado, i], function (error, results, fields) {
+            var query = connection.query('UPDATE VENTA SET  FECHA_VENTA = ?, TOTAL_VENTA = ?, ID_CLIENTE = ?, ID_EMPLEADO = ?  WHERE Id_compra = "'+i+'"', [r.FECHA_VENTA, r.Total_venta,r.Id_cliente , r.Id_empleado, i], function (error, results, fields) {
                 if (error) throw error;
                 let resp="Actualizado"
                 resolve(resp)
