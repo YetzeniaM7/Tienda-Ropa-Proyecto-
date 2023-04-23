@@ -27,23 +27,20 @@
 
   <h1 class="h1"style="text-align:center"> Sistema de Reservas</h1>
 
-
-<table class="table_equipo" id="customers">
-  <tr>
-    <th>Id_venta </th>    
-    <th>Fecha</th>
-    <th>Total_venta</th>
-    <th>Cliente</th>
-    <th>Empleado</th>
-  </tr>
-  <% resp.forEach(r => { %>
+  <table class="table_equipo" id="customers">
     <tr>
-      <td><%= r.Id_venta  %></td>
-      <td><%= r.Fecha_venta %></td>
-      <td><%= r.Total_venta %></td>
-      <td><%= r.Nombre_cliente %></td>
-      <td><%= r.Nombre_empleado %></td>
+      <th>Id_tienda </th>    
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Telefono</th>
     </tr>
+    <% resp.forEach(r => { %>
+      <tr>
+        <td><%= r.Id_tienda%></td>
+        <td><%= r.Nombre_tienda%></td>
+        <td><%= r.Direccion_tienda%></td>
+        <td><%= r.Telefono_tienda%></td>
+      </tr>
   <% }) %>
 </table>
   </body>
