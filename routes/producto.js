@@ -10,6 +10,11 @@ router.get('/', function(req,res,next){
     })
 })
 
+router.get('/sesion', validarToken, function(req, res, next) {
+    var payload = jwt.decode(req.headers.authorization.replace('Bearer ', ''))
+    if (payload.roles.includes("Admin")) {
+    res.send('Bienvenido Admin!')
+
 //agregar (Funciona)
 router.post('/', function(req, res, next){
     ProductController.Agregar(req.body)
@@ -44,5 +49,12 @@ router.delete('/:id', function(req,res,next){
         res.send(resp);
     })
 })
+
+
+    } else {
+      res.send("¡Solo el admin esta autorizado!")
+    }
+  });
+
 
 module.exports = router;
