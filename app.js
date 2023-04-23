@@ -11,6 +11,7 @@ var compraRouter = require('./routes/compra');
 var proveedorRouter = require('./routes/proveedor');
 var productoRouter = require('./routes/producto');
 var clienterouter = require('./routes/cliente');
+var empleadorouter = require('./routes/empleado');
 var app = express();
 
 // view engine setup
@@ -30,6 +31,7 @@ app.use('/compra', compraRouter);
 app.use('/proveedor', proveedorRouter);
 app.use('/producto', productoRouter);
 app.use('/cliente', clienterouter);
+app.use('/empleado', empleadorouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
