@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tienda de Ropa</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" href="https://i.ibb.co/kXMPtKN/Screenshot-1.png" type="png" size=20px>
+  </head>
+  <body>
+    <ul>
+      <li><img src="/images/uvm.png" width="60" height="60"></img></li>
+      <li><a href='/index'><i><b>Menu Principal</b></i></a></li>
+      <li><a href="/Cliente">Clientes</a></li>
+      <li><a href="/Compra">Compras</a></li> 
+      <li><a href="/Empleado">Empleados</a></li>
+      <li><a href="/Pedidos">Pedidos</a></li>
+      <li><a href="/Tienda">Tienda</a></li>
+      <li><a href="/Venta">Ventas</a></li>
+
+    </ul>
+    <div style = "text-align: center;">
+      <img src="https://i.ibb.co/vq53NVk/uvm.png" width="200" height="200"></img>
+    </div>
+
+
+  <h1 class="h1"style="text-align:center"> Tienda de Ropa</h1>
+  <h2 class = "h1" style="text-align: center;">Productos</h2>
+
+
+
+<table class="table_pedido" style="text-align:center;">
+  <tr>
+    <th>ID </th>    
+    <th>Fecha del pedido</th>
+    <th>Cantidad </th>
+    <th>ID del Proveedor del pedido</th>
+    <th>ID del Producto</th>
+  </tr>
+  <% resp.forEach(r => { %>
+    <tr>
+      <td><%= r.Id_pedido  %></td>
+        <td><%= r.Fecha_pedido %></td>
+        <td><%= r.Cantidad_pedido %></td>
+        <td><%= r.Id_proveedor %></td>
+        <td><%= r.Id_producto %></td>
+    </tr>
+  <% }) %>
+</table>
+  </body>
+</html>
+
+
+
+
+
+
+
