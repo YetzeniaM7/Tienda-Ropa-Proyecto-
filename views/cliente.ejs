@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tienda Ropa</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" href="https://i.ibb.co/kXMPtKN/Screenshot-1.png" type="png" size=20px>
+  </head>
+  <body>
+    <ul>
+      <li><img src="/images/uvm.png" width="60" height="60"></img></li>
+      <li><a href='/index'><i><b>Menu Principal</b></i></a></li>
+      <li><a href='/Compra'><i><b>Compras</b></i></a></li>
+      <li><a href='/Empleado'><i><b>Empleados</b></i></a></li>
+      <li><a href='/Pedidos'><i><b>Pedidos</b></i></a></li>
+      <li><a href='/Producto'><i><b>Productos</b></i></a></li>
+      <li><a href='/Proveedor'><i><b>Proveedor</b></i></a></li>
+      <li><a href='/Tienda'><i><b>Tienda</b></i></a></li>
+      <li><a href='/Venta'><i><b>Ventas</b></i></a></li>
+
+
+
+
+    </ul>
+    <div style = "text-align: center;">
+      <img src="https://i.ibb.co/vq53NVk/uvm.png" width="200" height="200"></img>
+    </div>
+
+
+  <h1 class="h1"style="text-align:center"> Tienda Ropa</h1>
+  <h2 class = "h1" style="text-align: center;">Clientes</h2>
+
+
+
+<table class="table_equipo" style="text-align:center;">
+  <tr>
+    <th>Id_cliente </th>    
+    <th>Nombre_cliente</th>
+    <th>Apellido_cliente</th>
+    <th>Direccion_cliente</th>
+    <th>Telefono_cliente</th>
+    <th>Correo_cliente</th>
+  </tr>
+  <% resp.forEach(r => { %>
+    <tr>
+      <td><%= r.Id_cliente  %></td>
+      <td><%= r.Nombre_cliente %></td>
+      <td><%= r.Apellido_cliente %></td>
+      <td><%= r.Direccion_cliente %></td>
+      <td><%= r.Telefono_cliente %></td>
+      <td><%= r.Correo_cliente %></td>
+    </tr>
+  <% }) %>
+</table>
+  </body>
+</html>
